@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+    --border: 214.3 31.8% 91.4%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer components {
+  .chat-markdown {
+    @apply break-words text-[15px] leading-7 text-slate-700;
+  }
+
+  .chat-markdown > :first-child {
+    @apply mt-0;
+  }
+
+  .chat-markdown > :last-child {
+    @apply mb-0;
+  }
+
+  .chat-markdown p {
+    @apply my-3;
+  }
+
+  .chat-markdown h1,
+  .chat-markdown h2,
+  .chat-markdown h3 {
+    @apply mb-2 mt-5 font-semibold tracking-tight text-slate-900;
+  }
+
+  .chat-markdown h1 {
+    @apply text-xl;
+  }
+
+  .chat-markdown h2 {
+    @apply text-lg;
+  }
+
+  .chat-markdown h3 {
+    @apply text-base;
+  }
+
+  .chat-markdown ul {
+    @apply my-3 list-disc space-y-1 pl-6;
+  }
+
+  .chat-markdown ol {
+    @apply my-3 list-decimal space-y-1 pl-6;
+  }
+
+  .chat-markdown li {
+    @apply pl-1;
+  }
+
+  .chat-markdown strong {
+    @apply font-semibold text-slate-900;
+  }
+
+  .chat-markdown a {
+    @apply font-medium text-emerald-800 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-950;
+  }
+
+  .chat-markdown blockquote {
+    @apply my-3 border-l-2 border-emerald-300 pl-4 text-slate-600;
+  }
+
+  .chat-markdown code {
+    @apply rounded bg-slate-100 px-1.5 py-0.5 font-mono text-[0.9em] text-slate-800;
+  }
+
+  .chat-markdown pre {
+    @apply my-3 overflow-x-auto rounded-xl bg-slate-900 p-4 text-sm text-slate-100;
+  }
+
+  .chat-markdown pre code {
+    @apply bg-transparent p-0 text-inherit;
+  }
+
+  .chat-markdown table {
+    @apply my-3 block w-full overflow-x-auto border-collapse text-sm;
+  }
+
+  .chat-markdown th,
+  .chat-markdown td {
+    @apply border border-slate-200 px-3 py-2 text-left;
+  }
+
+  .chat-markdown th {
+    @apply bg-slate-50 font-semibold text-slate-800;
+  }
+}

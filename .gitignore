@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+app/api/.venv/
+app/api/.env
+
+# Node / Next.js
+web/node_modules/
+web/.next/
+web/out/
+web/.env.local
+web/next-env.d.ts
+web/tsconfig.tsbuildinfo
